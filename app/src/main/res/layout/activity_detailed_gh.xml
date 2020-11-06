@@ -8,15 +8,119 @@
     android:background="@color/colorBackground"
     tools:context=".DetailedGhActivity">
 
-
     <TextView
-        android:id="@+id/deneme"
+        android:id="@+id/gh_name"
+        android:layout_weight="1"
         android:text="deneme"
+        android:textStyle="bold"
         android:textSize="30sp"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/colorForeground">
     </TextView>
 
+
+
+    <GridLayout
+        android:layout_weight="0"
+        android:layout_margin="10dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="@color/colorForeground"
+            android:text=" Son Sıcaklık: "
+            android:layout_margin="5dp"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="fill"
+            android:background="@color/colorForeground"
+            android:gravity="center"
+            android:text="30^C"
+            android:textSize="30sp">
+        </TextView>
+        <TextView
+            android:background="@color/colorForeground"
+            android:text=" Sıcaklık Aralığı: "
+            android:layout_gravity="fill"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp">
+        </TextView>
+        <TextView
+            android:background="@color/colorForeground"
+            android:gravity="center"
+            android:text="30 - 32^C"
+            android:layout_gravity="fill"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp">
+        </TextView>
+
+    </GridLayout>
+
+
+    <LinearLayout
+        android:layout_weight="0"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:background="@color/colorForeground"
+            android:text="Sera Sıcaklığını Değiştir"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp">
+        </TextView>
+        <TextView
+            android:layout_margin="5dp"
+            android:background="@color/colorForeground"
+            android:text="Sıcaklık Aralığını Değiştir"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:layout_weight="10"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_weight="1"
+        android:background="@color/colorForeground"
+        android:layout_margin="15dp"
+        android:text="KAYDET"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp">
+
+    </TextView>
 </LinearLayout>
