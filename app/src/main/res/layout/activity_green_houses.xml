@@ -34,6 +34,14 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <Switch
+            android:text="Açık    "
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/greenHouse2"
@@ -62,6 +70,14 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <Switch
+            android:text="Açık    "
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/greenHouse3"
@@ -90,19 +106,15 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <Switch
+            android:text="Açık    "
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
     </LinearLayout>
-
-    <ImageView
-        android:clickable="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_refresh_black_40dp">
-
-    </ImageView>
 
 
 </LinearLayout>
