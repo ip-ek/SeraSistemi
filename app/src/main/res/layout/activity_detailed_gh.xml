@@ -32,7 +32,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:background="@color/colorForeground"
-            android:text=" Son Sıcaklık: "
+            android:text="@string/lastTemp"
             android:layout_margin="5dp"
             android:layout_gravity="fill"
             android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
         </TextView>
         <TextView
             android:background="@color/colorForeground"
-            android:text=" İstenen Sıcaklık: "
+            android:text="@string/wantTemp"
             android:layout_margin="5dp"
             android:layout_gravity="fill"
             android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
 
         <TextView
             android:background="@color/colorForeground"
-            android:text=" Sıcaklık Aralığı: "
+            android:text="@string/diffTemp"
             android:layout_gravity="fill"
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
             android:id="@+id/gh_change_temp_btn"
             android:layout_margin="5dp"
             android:background="@color/colorForeground"
-            android:text="İstenen Sıcaklığı Değiştir"
+            android:text="@string/chWantTemp"
             android:gravity="center"
             android:clickable="true"
             android:layout_width="match_parent"
@@ -119,7 +119,7 @@
             android:id="@+id/gh_change_space_btn"
             android:layout_margin="5dp"
             android:background="@color/colorForeground"
-            android:text="Sıcaklık Aralığını Değiştir"
+            android:text="@string/chDiffTemp"
             android:gravity="center"
             android:clickable="true"
             android:layout_width="match_parent"
@@ -143,7 +143,7 @@
         android:layout_weight="1"
         android:background="@color/colorForeground"
         android:layout_margin="15dp"
-        android:text="KAYDET"
+        android:text="@string/save"
         android:gravity="center"
         android:clickable="true"
         android:layout_width="match_parent"

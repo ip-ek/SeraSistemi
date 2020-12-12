@@ -35,7 +35,7 @@ public class DetailedGhActivity extends AppCompatActivity implements NumberPicke
         int gh_no = getIntent().getIntExtra("GH_no",0);
         int heat= getIntent().getIntExtra("GH_temp", 0);
 
-        tw_name.setText("Sera "+ gh_no);
+        tw_name.setText(R.string.gh+" "+ gh_no);
         tw_curr_temp.setText(heat+"^C");
 
         tw_change_temp_btn.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +56,7 @@ public class DetailedGhActivity extends AppCompatActivity implements NumberPicke
             @Override
             public void onClick(View v) {
                 //push everything to server.
+                finish();
             }
         });
 

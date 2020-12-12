@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Система теплиц</string>
+    <string name="gh">Теплица</string>
+    <string name="gh1">Теплица 1</string>
+    <string name="gh2">Теплица 2</string>
+    <string name="gh3">Теплица 3</string>
+    <string name="open">открыто</string>
+    <string name="close">Закрыто</string>
+    <string name="lastTemp">\ Конечная температура:\ </string>
+    <string name="wantTemp">\ Желаемая температура:\ </string>
+    <string name="diffTemp">\ Диапазон температур:\ </string>
+    <string name="chWantTemp">Изменить желаемую температуру</string>
+    <string name="chDiffTemp">Изменить диапазон температур</string>
+    <string name="save">СПАСТИ</string>
+</resources>

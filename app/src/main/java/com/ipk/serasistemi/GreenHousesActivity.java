@@ -37,10 +37,10 @@ public class GreenHousesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!sw_gh1.isChecked()){
-                    sw_gh1.setText("Açık    ");
+                    sw_gh1.setText(R.string.open+"    ");
                     sw_gh1.setTextColor(getResources().getColor(R.color.positive));
                 }else{
-                    sw_gh1.setText("Kapalı    ");
+                    sw_gh1.setText(R.string.close+"    ");
                     sw_gh1.setTextColor(getResources().getColor(R.color.negative));
                 }
             }
@@ -51,10 +51,10 @@ public class GreenHousesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!sw_gh2.isChecked()){
-                    sw_gh2.setText("Açık    ");
+                    sw_gh2.setText(R.string.open+"    ");
                     sw_gh2.setTextColor(getResources().getColor(R.color.positive));
                 }else{
-                    sw_gh2.setText("Kapalı    ");
+                    sw_gh2.setText(R.string.close+"    ");
                     sw_gh2.setTextColor(getResources().getColor(R.color.negative));
                 }
             }
@@ -64,10 +64,10 @@ public class GreenHousesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!sw_gh3.isChecked()){
-                    sw_gh3.setText("Açık    ");
+                    sw_gh3.setText(R.string.open+"    ");
                     sw_gh3.setTextColor(getResources().getColor(R.color.positive));
                 }else{
-                    sw_gh3.setText("Kapalı    ");
+                    sw_gh3.setText(R.string.close+"    ");
                     sw_gh3.setTextColor(getResources().getColor(R.color.negative));
                 }
             }

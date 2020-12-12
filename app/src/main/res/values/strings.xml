@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">SeraSistemi</string>
+    <string name="gh">Sera</string>
+    <string name="gh1">Sera 1</string>
+    <string name="gh2">Sera 2</string>
+    <string name="gh3">Sera 3</string>
+    <string name="open">Açık</string>
+    <string name="close">Kapalı</string>
+    <string name="lastTemp">\ Son Sıcaklık:\ </string>
+    <string name="wantTemp">\ İstenen Sıcaklık:\ </string>
+    <string name="diffTemp">\ Sıcaklık Aralığı:\ </string>
+    <string name="chWantTemp">İstenen Sıcaklığı Değiştir</string>
+    <string name="chDiffTemp">Sıcaklık Aralığını Değiştir</string>
+    <string name="save">KAYDET</string>
 </resources>

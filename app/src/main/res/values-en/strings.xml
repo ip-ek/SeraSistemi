@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GreenHouseSystem</string>
+    <string name="gh">Green House</string>
+    <string name="gh1">Green House 1</string>
+    <string name="gh2">Green House 2</string>
+    <string name="gh3">Green House 3</string>
+    <string name="open">Open</string>
+    <string name="close">Closed</string>
+    <string name="lastTemp">\ Last Temperature:\ </string>
+    <string name="wantTemp">\ Desired Temperature:\ </string>
+    <string name="diffTemp">\ Temperature Range:\ </string>
+    <string name="chWantTemp">Change Desired Temperature</string>
+    <string name="chDiffTemp">Change Temperature Range</string>
+    <string name="save">SAVE</string>
+</resources>
