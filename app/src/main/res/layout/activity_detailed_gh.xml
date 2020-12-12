@@ -41,6 +41,7 @@
         </TextView>
 
         <TextView
+            android:id="@+id/gh_curr_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -52,6 +53,28 @@
         </TextView>
         <TextView
             android:background="@color/colorForeground"
+            android:text=" İstenen Sıcaklık: "
+            android:layout_margin="5dp"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/gh_wanted_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="fill"
+            android:background="@color/colorForeground"
+            android:gravity="center"
+            android:text="30^C"
+            android:textSize="30sp">
+        </TextView>
+
+        <TextView
+            android:background="@color/colorForeground"
             android:text=" Sıcaklık Aralığı: "
             android:layout_gravity="fill"
             android:layout_margin="5dp"
@@ -60,9 +83,10 @@
             android:textSize="30sp">
         </TextView>
         <TextView
+            android:id="@+id/gh_temp_space"
             android:background="@color/colorForeground"
             android:gravity="center"
-            android:text="30 - 32^C"
+            android:text="5^C"
             android:layout_gravity="fill"
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
@@ -81,9 +105,10 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/gh_change_temp_btn"
             android:layout_margin="5dp"
             android:background="@color/colorForeground"
-            android:text="Sera Sıcaklığını Değiştir"
+            android:text="İstenen Sıcaklığı Değiştir"
             android:gravity="center"
             android:clickable="true"
             android:layout_width="match_parent"
@@ -91,6 +116,7 @@
             android:textSize="30sp">
         </TextView>
         <TextView
+            android:id="@+id/gh_change_space_btn"
             android:layout_margin="5dp"
             android:background="@color/colorForeground"
             android:text="Sıcaklık Aralığını Değiştir"
@@ -105,19 +131,21 @@
 
     <LinearLayout
         android:layout_margin="15dp"
-        android:layout_weight="10"
-        android:background="@color/colorAccent"
+        android:layout_weight="150"
+        android:background="@drawable/sera1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/gh_save"
         android:layout_weight="1"
         android:background="@color/colorForeground"
         android:layout_margin="15dp"
         android:text="KAYDET"
         android:gravity="center"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp">
