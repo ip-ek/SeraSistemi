@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Switch;
@@ -77,6 +78,11 @@ public class GreenHousesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("GH_no", 1);
+                String tmp=String.valueOf(heat_gh1.getText());
+                tmp=tmp.substring(0,tmp.length()-2);
+                Log.d("takip", ""+tmp);
+                int heat=Integer.parseInt(tmp);
+                intent.putExtra("GH_temp", heat);
                 startActivity(intent);
             }
         });
@@ -85,6 +91,11 @@ public class GreenHousesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("GH_no", 2);
+                String tmp=String.valueOf(heat_gh2.getText());
+                tmp=tmp.substring(0,tmp.length()-2);
+                Log.d("takip", ""+tmp);
+                int heat=Integer.parseInt(tmp);
+                intent.putExtra("GH_temp", heat);
                 startActivity(intent);
             }
         });
@@ -93,6 +104,11 @@ public class GreenHousesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent.putExtra("GH_no", 3);
+                String tmp=String.valueOf(heat_gh3.getText());
+                tmp=tmp.substring(0,tmp.length()-2);
+                Log.d("takip", ""+tmp);
+                int heat=Integer.parseInt(tmp);
+                intent.putExtra("GH_temp", heat);
                 startActivity(intent);
             }
         });
