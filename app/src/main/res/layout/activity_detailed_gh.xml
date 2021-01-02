@@ -72,7 +72,7 @@
             android:text="30^C"
             android:textSize="30sp">
         </TextView>
-
+        <!--
         <TextView
             android:background="@color/colorForeground"
             android:text="@string/diffTemp"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:textSize="30sp">
         </TextView>
-
+        -->
     </GridLayout>
 
 
@@ -115,6 +115,7 @@
             android:layout_height="wrap_content"
             android:textSize="30sp">
         </TextView>
+        <!--
         <TextView
             android:id="@+id/gh_change_space_btn"
             android:layout_margin="5dp"
@@ -126,7 +127,7 @@
             android:layout_height="wrap_content"
             android:textSize="30sp">
         </TextView>
-
+        -->
     </LinearLayout>
 
     <LinearLayout

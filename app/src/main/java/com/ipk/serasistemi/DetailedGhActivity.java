@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -27,16 +28,18 @@ public class DetailedGhActivity extends AppCompatActivity implements NumberPicke
         tw_name=findViewById(R.id.gh_name);
         tw_curr_temp=findViewById(R.id.gh_curr_temp);
         tw_wanted_temp=findViewById(R.id.gh_wanted_temp);
-        tw_temp_space=findViewById(R.id.gh_temp_space);
+        //tw_temp_space=findViewById(R.id.gh_temp_space);
         tw_change_temp_btn=findViewById(R.id.gh_change_temp_btn);
-        tw_change_space_btn=findViewById(R.id.gh_change_space_btn);
+        //tw_change_space_btn=findViewById(R.id.gh_change_space_btn);
         tw_save_btn=findViewById(R.id.gh_save);
 
         int gh_no = getIntent().getIntExtra("GH_no",0);
         int heat= getIntent().getIntExtra("GH_temp", 0);
+        int target_heat= getIntent().getIntExtra("GH_target",0);
 
-        tw_name.setText(R.string.gh+" "+ gh_no);
+        tw_name.setText(getApplicationContext().getString(R.string.gh)+" "+ gh_no);
         tw_curr_temp.setText(heat+"^C");
+        tw_wanted_temp.setText(target_heat+"^C");
 
         tw_change_temp_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,17 +48,18 @@ public class DetailedGhActivity extends AppCompatActivity implements NumberPicke
             }
         });
 
-        tw_change_space_btn.setOnClickListener(new View.OnClickListener() {
+        /*tw_change_space_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 show(2,0,100);
             }
-        });
+        });*/
 
         tw_save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //push everything to server.
+                //TODO: push everything to server.
+                //id ve değerler
                 finish();
             }
         });
@@ -83,7 +87,7 @@ public class DetailedGhActivity extends AppCompatActivity implements NumberPicke
                     tw_wanted_temp.setText(String.valueOf(np.getValue())+"^C"); //set the value to textview
                 }else{
                     if(type==2){
-                        tw_temp_space.setText(String.valueOf(np.getValue())+"^C");
+                        //tw_temp_space.setText(String.valueOf(np.getValue())+"^C");
                     }
                 }
 
