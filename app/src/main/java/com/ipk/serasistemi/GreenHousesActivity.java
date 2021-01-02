@@ -1,7 +1,11 @@
 package com.ipk.serasistemi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,14 +13,20 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class GreenHousesActivity extends AppCompatActivity {
+
     LinearLayout lay_gh1, lay_gh2, lay_gh3;
     Switch sw_gh1, sw_gh2, sw_gh3;
     TextView heat_gh1, heat_gh2, heat_gh3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final Context context =getApplicationContext();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_houses);
 
@@ -32,15 +42,73 @@ public class GreenHousesActivity extends AppCompatActivity {
         heat_gh2=findViewById(R.id.gh2_heat);
         heat_gh3=findViewById(R.id.gh3_heat);
 
+        Call<List<GhInfo>> callAll=RetrofitConnection.getApiService().getAll();
+        callAll.enqueue(new Callback<List<GhInfo>>() {
+            @Override
+            public void onResponse(Call<List<GhInfo>> call, Response<List<GhInfo>> response) {
+                if(!response.isSuccessful()){
+                    Toast.makeText(getApplicationContext(), "Veri çekilemedi!\nHata: "+response.code(),Toast.LENGTH_LONG).show();
+                } else{
+                    List<GhInfo> GhInfoList = response.body();
+
+                    /*for(GhInfo each:GhInfoList){
+                        Log.d("takip","."+each.getCurrentHeat());
+                    }*/
+                    Log.d("takip", "hi: "+GhInfoList.get(0).getCurrentHeat());
+
+                    heat_gh1.setText(GhInfoList.get(0).getCurrentHeat()+"^C");
+                    heat_gh2.setText(GhInfoList.get(1).getCurrentHeat()+"^C");
+                    heat_gh3.setText(GhInfoList.get(2).getCurrentHeat()+"^C");
+
+                    if(GhInfoList.get(0).getStatus()==1){
+                        sw_gh1.setChecked(true);
+                        sw_gh1.setText(context.getString(R.string.open)+"    ");
+                        sw_gh1.setTextColor(getResources().getColor(R.color.positive));
+                    }else{
+                        sw_gh1.setChecked(false);
+                        sw_gh1.setText(context.getString(R.string.close)+"    ");
+                        sw_gh1.setTextColor(getResources().getColor(R.color.negative));
+                    }
+                    if(GhInfoList.get(1).getStatus()==1){
+                        sw_gh2.setChecked(true);
+                        sw_gh2.setText(context.getString(R.string.open)+"    ");
+                        sw_gh2.setTextColor(getResources().getColor(R.color.positive));
+                    }else{
+                        sw_gh2.setChecked(false);
+                        sw_gh2.setText(context.getString(R.string.close)+"    ");
+                        sw_gh2.setTextColor(getResources().getColor(R.color.negative));
+                    }
+                    if(GhInfoList.get(2).getStatus()==1){
+                        sw_gh3.setChecked(true);
+                        sw_gh3.setText(context.getString(R.string.open)+"    ");
+                        sw_gh3.setTextColor(getResources().getColor(R.color.positive));
+                    }else{
+                        sw_gh3.setChecked(false);
+                        sw_gh3.setText(context.getString(R.string.close)+"    ");
+                        sw_gh3.setTextColor(getResources().getColor(R.color.negative));
+                    }
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<GhInfo>> call, Throwable t) {
+                //hatalı olursa ne olacak
+                Toast.makeText(getApplicationContext(),"Bağlantı hatası!\n"+ t.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+
+
         //bunun bilgisi nerede tutulacaksa oradan alınmalı en başta
         sw_gh1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!sw_gh1.isChecked()){
-                    sw_gh1.setText(R.string.open+"    ");
+                if(sw_gh1.isChecked()){
+                    sw_gh1.setText(context.getString(R.string.open)+"    ");
                     sw_gh1.setTextColor(getResources().getColor(R.color.positive));
                 }else{
-                    sw_gh1.setText(R.string.close+"    ");
+                    sw_gh1.setText(context.getString(R.string.close)+"    ");
                     sw_gh1.setTextColor(getResources().getColor(R.color.negative));
                 }
             }
@@ -50,11 +118,11 @@ public class GreenHousesActivity extends AppCompatActivity {
         sw_gh2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!sw_gh2.isChecked()){
-                    sw_gh2.setText(R.string.open+"    ");
+                if(sw_gh2.isChecked()){
+                    sw_gh2.setText(context.getString(R.string.open)+"    ");
                     sw_gh2.setTextColor(getResources().getColor(R.color.positive));
                 }else{
-                    sw_gh2.setText(R.string.close+"    ");
+                    sw_gh2.setText(context.getString(R.string.close)+"    ");
                     sw_gh2.setTextColor(getResources().getColor(R.color.negative));
                 }
             }
@@ -63,11 +131,11 @@ public class GreenHousesActivity extends AppCompatActivity {
         sw_gh3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!sw_gh3.isChecked()){
-                    sw_gh3.setText(R.string.open+"    ");
+                if(sw_gh3.isChecked()){
+                    sw_gh3.setText(context.getString(R.string.open)+"    ");
                     sw_gh3.setTextColor(getResources().getColor(R.color.positive));
                 }else{
-                    sw_gh3.setText(R.string.close+"    ");
+                    sw_gh3.setText(context.getString(R.string.close)+"    ");
                     sw_gh3.setTextColor(getResources().getColor(R.color.negative));
                 }
             }
